@@ -1,0 +1,1528 @@
+2026-10-19 06:29:55 UTC
+Linux-7.1.13-402.asahi.fc44.aarch64+16k-aarch64-with-glibc2.43
+Ren'Py 8.5.3.26051504
+
+Early init took 38 ms
+Loading error handling took 16 ms
+Loading script took 61 ms
+Loading save slot metadata took 22 ms
+Loading persistent took 0 ms
+Running init code took 25 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 20 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 10 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 229, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 348, in script
+    $ __gl_test()
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gltest.rpy", line 348, in <module>
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 282, in _m1_00gltest__gl_test
+    _gl_performance_test()
+  File "renpy/common/00gltest.rpy", line 305, in _gl_performance_test
+    ui.interact(suppress_underlay=True, suppress_overlay=True)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 285, in script
+  File "renpy/ast.py", line 1588, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 285, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 287, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 287, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 290, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 994, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports/sayexports.py", line 129, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1565, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 1220, in do_display
+    display_say(who, what, self.do_show, **display_args)
+  File "renpy/character.py", line 902, in display_say
+    rv = renpy.ui.interact(mouse="say", type=type, roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 290, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 292, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 292, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 311, in script
+  File "renpy/ast.py", line 1786, in execute
+    statement_name(name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 129, in _window_auto_callback
+    _window_hide(auto=True)
+  File "renpy/common/000window.rpy", line 111, in _window_hide
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 311, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 320, in <module>
+  File "renpy/exports/inputexports.py", line 203, in input
+    rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+  File "game/script.rpy", line 320, in <module>
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+Full traceback:
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+While running game code:
+  File "game/script.rpy", line 309, in script
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+Traceback (most recent call last):
+  File "game/script.rpy", line 309, in script
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 965, in execute
+    statement_name(stmt_name)
+  File "renpy/ast.py", line 547, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 75, in _window_show
+    renpy.with_statement(trans)
+  File "renpy/exports/statementexports.py", line 253, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 1478, in do_with
+    return self.interact(
+        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
+    )
+  File "renpy/display/core.py", line 2117, in interact
+    self.start()
+  File "renpy/display/core.py", line 918, in start
+    self.post_init()
+  File "renpy/display/core.py", line 1001, in post_init
+    self.set_icon()
+  File "renpy/display/core.py", line 1054, in set_icon
+    with renpy.loader.load(icon, directory="images") as f:
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'gui/window_icon.png'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib/py3-linux-aarch64/../../renpy.py", line 304, in <module>
+    main()
+  File "lib/py3-linux-aarch64/../../renpy.py", line 300, in main
+    renpy.bootstrap.bootstrap(renpy_base)
+  File "renpy/bootstrap.py", line 401, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 596, in main
+    run(restart)
+  File "renpy/main.py", line 137, in run
+    renpy.execution.run_context(True)
+  File "renpy/execution.py", line 1050, in run_context
+    context.run()
+  File "game/script.rpy", line 309, in script
+  File "game/script.rpy", line 309, in script
+  File "renpy/error.py", line 1746, in report_exception
+    renpy.loadsave.cycle_saves("_tracesave-", 10)
+  File "renpy/loadsave.py", line 708, in cycle_saves
+    rename_save(name + str(i), name + str(i + 1))
+  File "renpy/loadsave.py", line 678, in rename_save
+    location.rename(old, new)
+  File "renpy/savelocation.py", line 598, in rename
+    l.rename(old, new)
+  File "renpy/savelocation.py", line 374, in rename
+    self.scan()
+  File "renpy/savelocation.py", line 181, in scan
+    new_mtimes[slotname] = os.path.getmtime(os.path.join(self.directory, fn))
+  File "<frozen posixpath>", line 85, in join
+KeyboardInterrupt
